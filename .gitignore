@@ -1,0 +1,36 @@
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# CLI configuration files
+.terraformrc
+terraform.rc
+
+# Ignore variables file containing sensitive info
+terraform.tfvars
+*.auto.tfvars
+x.sh
+
+# -----------------------------------------------------------------------------
+# Project: GCP Infra Automation
+# Purpose: Ignore local and sensitive files when working on the Terraform
+#          infrastructure repository. This file was written/maintained by Aymen
+#          as part of the "GCP Infra Automation" project (VPC, private Cloud
+#          SQL, and secure networking via Terraform).
+# Notes:
+# - Keep sensitive values (for example `terraform.tfvars`) out of version
+#   control. They are intentionally listed above so developers don't accidentally
+#   commit secrets.
+# - If you ever need to share a tfvars file safely, use a secure secret store
+#   (Vault, Secret Manager) or a CI/CD secret injection approach instead.
+# -----------------------------------------------------------------------------
