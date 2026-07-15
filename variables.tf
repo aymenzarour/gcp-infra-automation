@@ -1,13 +1,5 @@
-// ---------------------------------------------------------------------------
-// Project variables for: GCP Infra Automation
-// Purpose: Keep all configurable values for the Terraform-managed GCP
-// infrastructure in one place. These variables are intentionally minimal and
-// opinionated for a demo/dev environment (custom VPC, private subnets, Cloud
-// SQL without public IPs). Change defaults carefully for production.
-// ---------------------------------------------------------------------------
-
 variable "project_id" {
-  description = "L'ID de votre projet GCP"
+  description = "L'ID du projet GCP"
   type        = string
 }
 
@@ -23,8 +15,7 @@ variable "zone" {
   default     = "europe-west9-a"
 }
 
-// CIDR range for the custom VPC. Keep this private and avoid conflicts with
-// on-premises or peered networks. Example: 10.0.0.0/16
+// CIDR range for the custom VPC.
 variable "vpc_cidr" {
   description = "Plage IP pour le VPC personnalisé"
   default     = "10.0.0.0/16"
